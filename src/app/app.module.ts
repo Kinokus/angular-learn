@@ -11,11 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { ConditionsComponent } from './components/conditions/conditions.component';
 import { AtributesComponent } from './components/atributes/atributes.component';
 import { InputOutputComponent } from './components/input-output/input-output.component';
+import { TemplatesComponent } from './components/templates/templates.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent, AtributesComponent, InputOutputComponent,
+    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent, AtributesComponent, InputOutputComponent, TemplatesComponent,
   ],
   imports: [
     BrowserModule,

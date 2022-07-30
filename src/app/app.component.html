@@ -1,19 +1,31 @@
 <!--<app-user></app-user>-->
 <!--<app-product *ngIf="showProduct"></app-product>-->
 <!--<button (click)="showProduct = !showProduct">Show / Hide product </button>-->
+<!--<hr>-->
 <!--<app-binding></app-binding>-->
+<!--<hr>-->
 <!--<app-conditions></app-conditions>-->
+<!--<hr>-->
 <!--<app-atributes></app-atributes>-->
-<hr>
+<!--<hr>-->
 <!--<app-input-output [title]="'static title'"></app-input-output>-->
-<app-input-output
-  (sayHi)="onSayHi($event)"
-  [(counter)]="age"
-  [title]="'Title ' + (expression ? 'one' : 'two')"
->
-</app-input-output>
+<!--<app-input-output-->
+<!--  (sayHi)="onSayHi($event)"-->
+<!--  [(counter)]="age"-->
+<!--  [title]="'Title ' + (expression ? 'one' : 'two')"-->
+<!--&gt;-->
+<!--</app-input-output>-->
 <!--<app-input-output (sayHi)="onSayHi($event)" [title]="'Static title'"></app-input-output>-->
-<br>
-<button (click)="expression=!expression">{{!expression ? 'one' : 'two'}}</button>
+<!--<br>-->
+<!--<button (click)="expression=!expression">{{!expression ? 'one' : 'two'}}</button>-->
+<!--<hr>-->
 
-<hr>
+<app-templates [template]="ref">
+  <h3 class="header">Header</h3>
+  <p class="body">Body 1</p>
+  <p class="body">Body 2</p>
+  <footer class="footer">Footer</footer>
+</app-templates>
+<ng-template #ref let-element>
+  <span>App:{{element}}</span>
+</ng-template>

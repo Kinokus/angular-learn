@@ -1,0 +1,32 @@
+<ng-content select=".header"></ng-content>
+<hr>
+<ng-content select=".body"></ng-content>
+<hr>
+<ng-content select=".footer"></ng-content>
+<hr>
+<ng-template #ref let-defaultValue let-number='foo'>
+  <p>Base template {{number}} {{defaultValue}}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="ref; context:{foo:123, $implicit:456}"></ng-container>
+<hr>
+<div *ngIf="true" [style.background-color]="'wheat'" [style.padding.px]="4">
+  <div *ngFor="let item of [1,2,3]" [style.background-color]="'lightblue'">
+    {{    item    }}
+  </div>
+</div>
+<br>
+<ng-container *ngIf="true" [style.background-color]="'wheat'" [style.padding.px]="4">
+  <div *ngFor="let item of [1,2,3]" [style.background-color]="'lightblue'">
+    {{    item    }}
+  </div>
+</ng-container>
+<hr>
+
+<ng-template #def let-element>
+  <span>Default:{{element}}</span>
+</ng-template>
+
+<div *ngFor="let item of [7,8,9]">
+  <ng-container *ngTemplateOutlet="template||def; context:{$implicit:item}"></ng-container>
+</div>
