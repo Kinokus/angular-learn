@@ -6,16 +6,21 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user.component';
 import { ProductComponent } from './components/product/product.component';
 import { CategoryComponent } from './components/category/category.component';
+import { BindingComponent } from './components/binding/binding.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, ProductComponent, CategoryComponent
+    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

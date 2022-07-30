@@ -1,0 +1,21 @@
+<div>
+  <div (click)="updatePhone()" [title]="phone">Phone:     {{phone}}</div>
+  <div>Full name: {{fullName}}</div>
+
+  <div [innerHTML]="boldText"></div>
+  <input (input)="onInput($event)" [value]="phone" type="text">
+  <input (ngModelChange)="user.surname=$event" [ngModel]="user.surname" type="text">
+  <input [(ngModel)]="user.name" type="text">
+
+  <br>
+  <br>
+
+  <form (ngSubmit)="onSubmit()" action="#">
+    <input [(ngModel)]="login" type="text">
+    <input [(ngModel)]="password" type="password">
+    <button type="submit">Submit</button>
+
+  </form>
+
+</div>
+
