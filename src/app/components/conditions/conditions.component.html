@@ -1,0 +1,47 @@
+<button (click)="expression=!expression">Test</button>
+<div *ngIf="expression; else:notExpression"> I'm Ok</div>
+<div *ngIf="!expression"> I'm Not - 1</div>
+<ng-template #notExpression>
+  <div> I'm Not - 2</div>
+</ng-template>
+
+<hr>
+<button (click)="generateUser()">New user</button>
+<ul *ngIf="deepObject?.user as user">
+  <li>
+    {{user.name}}
+  </li>
+  <li>
+    {{user.surname}}
+  </li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let user of users; index as idx">
+    <span>{{idx}}</span>
+    <span>_</span>
+    <span>{{user.name}}</span>
+    <span>_</span>
+    <span>{{user.surname}}</span>
+  </li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let user of users; index as idx; trackBy: trackBy" [ngSwitch]="user.template">
+    <p *ngSwitchCase="'bold'">
+      <b>
+        {{user.name}}
+      </b>
+    </p>
+    <p *ngSwitchCase="'italic'">
+      <i>
+        {{user.name}}
+      </i>
+    </p>
+    <p *ngSwitchDefault>
+      <span>
+        {{user.name}}
+      </span>
+    </p>
+  </li>
+</ul>

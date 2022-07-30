@@ -8,11 +8,12 @@ import { ProductComponent } from './components/product/product.component';
 import { CategoryComponent } from './components/category/category.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { FormsModule } from '@angular/forms';
+import { ConditionsComponent } from './components/conditions/conditions.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent,
+    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent,
   ],
   imports: [
     BrowserModule,
