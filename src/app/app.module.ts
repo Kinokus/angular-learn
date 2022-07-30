@@ -9,11 +9,12 @@ import { CategoryComponent } from './components/category/category.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { ConditionsComponent } from './components/conditions/conditions.component';
+import { AtributesComponent } from './components/atributes/atributes.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent,
+    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent, AtributesComponent,
   ],
   imports: [
     BrowserModule,

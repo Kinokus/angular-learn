@@ -1,0 +1,18 @@
+<h1>Attrs</h1>
+<p [title]="title">tile</p>
+<p [draggable]="true">dragable</p>
+<p [attr.draggable]="true">dragable</p>
+<p [attr.data-debug]="'data-debug'">data-debug</p>
+<p [attr.class]="'data-class'">data-class</p>
+
+<h1>Class</h1>
+<p [class]="['class1', 'class2']">class bind arr</p>
+<p [class]="{class3:true,class4:false}">class bind obj</p>
+<p [class]="'class5'">class as string</p>
+<p [class.class6]="true" [class.class7]="false">class bind one-by-one</p>
+
+<h1>Style</h1>
+<p [attr.style]="'color: green'">style bind</p>
+<p [style.background-color]="'wheat'">style bind one-by-one</p>
+<p [style]="{backgroundColor:'wheat', width:'100px', 'height.px':100}">style bind obj</p>
+<p [style.height.px]="100" [style]="{backgroundColor:'wheat', width:'200px'}">style bind obj + one-by-one</p>
