@@ -12,11 +12,12 @@ import { ConditionsComponent } from './components/conditions/conditions.componen
 import { AtributesComponent } from './components/atributes/atributes.component';
 import { InputOutputComponent } from './components/input-output/input-output.component';
 import { TemplatesComponent } from './components/templates/templates.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent, AtributesComponent, InputOutputComponent, TemplatesComponent,
+    AppComponent, UserComponent, ProductComponent, CategoryComponent, BindingComponent, ConditionsComponent, AtributesComponent, InputOutputComponent, TemplatesComponent, MenuComponent,
   ],
   imports: [
     BrowserModule,

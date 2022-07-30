@@ -20,12 +20,27 @@
 <!--<button (click)="expression=!expression">{{!expression ? 'one' : 'two'}}</button>-->
 <!--<hr>-->
 
-<app-templates [template]="ref">
-  <h3 class="header">Header</h3>
-  <p class="body">Body 1</p>
-  <p class="body">Body 2</p>
-  <footer class="footer">Footer</footer>
-</app-templates>
-<ng-template #ref let-element>
-  <span>App:{{element}}</span>
-</ng-template>
+<!--<app-templates [template]="ref">-->
+<!--  <h3 class="header">Header</h3>-->
+<!--  <p class="body">Body 1</p>-->
+<!--  <p class="body">Body 2</p>-->
+<!--  <footer class="footer">Footer</footer>-->
+<!--</app-templates>-->
+<!--<ng-template #ref let-element>-->
+<!--  <span>App:{{element}}</span>-->
+<!--</ng-template>-->
+<!--<hr>-->
+
+<button (click)="menu0.show()">Open menu 0</button>
+<app-menu #menu0>
+  <span>APP0</span>
+</app-menu>
+<button (click)="menu1.show()">Open menu 1</button>
+<app-menu #menu1>
+  <span>APP1</span>
+</app-menu>
+<button (click)="menu2.show()">Open menu 2</button>
+<app-menu #menu2>
+  <span>APP2</span>
+</app-menu>
+
