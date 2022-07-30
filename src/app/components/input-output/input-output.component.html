@@ -1,0 +1,8 @@
+<h1>{{title?.toUpperCase()}}</h1>
+<button (click)="onClick()"> Say !</button>
+<br>
+<button (click)="counterChange.emit(counter+1)">+1</button>
+<span>{{counter}}</span>
+<button (click)="counterChange.emit(counter-1)">-1</button>
+
+

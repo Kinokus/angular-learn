@@ -3,4 +3,17 @@
 <!--<button (click)="showProduct = !showProduct">Show / Hide product </button>-->
 <!--<app-binding></app-binding>-->
 <!--<app-conditions></app-conditions>-->
-<app-atributes></app-atributes>
+<!--<app-atributes></app-atributes>-->
+<hr>
+<!--<app-input-output [title]="'static title'"></app-input-output>-->
+<app-input-output
+  (sayHi)="onSayHi($event)"
+  [(counter)]="age"
+  [title]="'Title ' + (expression ? 'one' : 'two')"
+>
+</app-input-output>
+<!--<app-input-output (sayHi)="onSayHi($event)" [title]="'Static title'"></app-input-output>-->
+<br>
+<button (click)="expression=!expression">{{!expression ? 'one' : 'two'}}</button>
+
+<hr>
